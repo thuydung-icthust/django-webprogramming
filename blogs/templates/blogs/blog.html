@@ -1,0 +1,25 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+
+<h2>
+    Blog: {{ blog.title }}
+</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            {{ blog.date_added|date:'M d, Y H:i' }}
+            <small>
+                <a href="{% url 'blogs:edit_blog' blog.id %}">
+                    Edit blog</a>
+            </small>
+        </h3>
+    </div>
+    <div class="panel-body">
+        {{ blog.text|linebreaks }}
+    </div>
+</div> <!-- panel -->
+
+
+
+{% endblock content %}

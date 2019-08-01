@@ -1,0 +1,17 @@
+{% extends "blogs/base.html" %}
+
+{% block header %}
+<div class='jumbotron'>
+    <h1>Speak up your mind.</h1>
+</div>
+{% endblock header %}
+
+{% block content %}
+<h2>
+    <a href="{% url 'users:register' %}">Register an account</a> to become a blog-writer,
+    and take down all your memmories. 
+</h2>
+<h2>
+    Anywhere you go, I will be there...
+</h2>
+{% endblock content %}
