@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hhrofvu27wdt&!(o2dmf2mmmp)3g3b(fg6%5pb*^l8n5ham_6)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -126,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/home/dung/workspace/python/greenblogs/blogs/static'
 LOGOUT_REDIRECT_URL = '/'
 
 LOGIN_URL = '/users/login/'
@@ -137,6 +137,7 @@ BOOTSTRAP3 = {
 }
 
 # Heroku settings
+
 cwd = os.getcwd()
 if cwd == '/app' or cwd[:4] == '/tmp':
     import dj_database_url
@@ -146,13 +147,15 @@ if cwd == '/app' or cwd[:4] == '/tmp':
 # Honor the 'X-Forwarded-Proto' header for request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # Allow only Heroku to host the project.
-    ALLOWED_HOSTS = ['learning-log.herokuapp.com']
+    ALLOWED_HOSTS = ['.herokuapp.com']
     DEBUG = False
     # Allow all host headers.
     #ALLOWED_HOSTS = ['*']
-# Static asset configuration
+    # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+        os.path.join(BASE_DIR, 'static'),
+        
     )
+

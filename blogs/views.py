@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 #from django.contrib.auth.decorators import login_required
-from .models import BlogPost
-from .forms import BlogForm
+from .models import BlogPost, Contact
+from .forms import BlogForm, ContactForm
 from django.contrib.auth.decorators import login_required
 # from .forms import BlogForm
 
@@ -36,12 +36,13 @@ def new_blog(request):
         # POST data submitted, process data.
         form = BlogForm(request.POST)
         if form.is_valid():
-            new_blog=form.save(commit=False)
+            new_blog=form.save()
             new_blog.owner=request.user
             new_blog.save()
             return HttpResponseRedirect(reverse('blogs:blogposts'))
     context = {'form': form}
     return render(request, 'blogs/new_blog.html', context)
+
 
 @login_required
 def edit_blog(request, blog_id):
@@ -60,3 +61,19 @@ def edit_blog(request, blog_id):
         return HttpResponseRedirect(reverse('blogs:blogposts'))    
     context = {'blog': blog, 'form': form}
     return render(request, 'blogs/edit_blog.html', context)
+
+def aboutme(request):
+    return render(request, 'blogs/aboutme.html')
+
+def contact(request):
+    if request.method != 'POST':
+        # No data submitted, create a blank form.
+        form = ContactForm()
+    else:
+        # POST data submitted, process data.
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('blogs:index'))
+    context = {'form': form}
+    return render(request, 'blogs/contact.html', context)

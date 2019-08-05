@@ -1,11 +1,17 @@
 {% extends 'blogs/base.html' %}
+{% load static %}
 {% block content %}
 
-<h2>
+<div class="content col-sm-12" style="text-align: center">
+
+<div class="container bg2"> <img style="width: 100%" alt="Image description" src="{% static 'blogs/images/bg2.jpg' %}" /></div>
+
+<div class="mainblog">
+<h2 style="left: 0%;">
     Blog: {{ blog.title }}
 </h2>
 
-<div class="panel panel-default">
+<div class="panel panel-danger">
     <div class="panel-heading">
         <h3>
             {{ blog.date_added|date:'M d, Y H:i' }}
@@ -19,6 +25,8 @@
         {{ blog.text|linebreaks }}
     </div>
 </div> <!-- panel -->
+</div>
+</div>
 
 
 

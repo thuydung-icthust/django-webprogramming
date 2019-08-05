@@ -1,4 +1,5 @@
 {% load bootstrap3 %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>GreenFlower's BLOGS</title>
+	 <title>GreenFlower's BLOGS</title>
+	<link rel="shortcut icon" href="{% static 'blogs/images/logo2.png' %}" />
+
+	<link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'blogs/style.css' %}" />
+	
     {% bootstrap_css %}
     {% bootstrap_javascript %}
 
@@ -15,26 +28,28 @@
 
 <body>
     <!-- Static navbar -->
-    <div class="navbar navbar-inverse navbar-static-top bg-dark">
+    <div class="navbar fixed-top navbar-inverse bg-dark">
         <div class="container">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
 								aria-expanded="false" aria-controls="navbar">
 							</button>
 							<a class="navbar-brand" href="{% url 'blogs:index' %}">
-								GreenFlower's Blogs</a>
+								GreenFlower</a>
+								<img src="{% static 'blogs/images/logo2.png' %}" height="35" alt="mdb logo">
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
 								<li><a href="{% url 'blogs:blogposts' %}">Blogs</a></li>
+								<li><a href="{% url 'blogs:aboutme' %}">About me</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{% if user.is_authenticated %}
 								<li><a>Hello, {{ user.username }}.</a></li>
-								<li><a href="{% url 'users:logout' %}">Log Out</a></li>
+								<li><a href="{% url 'users:logout' %}"><span class="glyphicon glyphicon-log-out" style="color:red"></span> Log Out</a></li>
 								{% else %}
-								<li><a href="{% url 'users:register' %}">Register</a></li>
-								<li><a href="{% url 'users:login' %}">Log In</a></li>
+								<li><a href="{% url 'users:register' %}"><span class="glyphicon glyphicon-user" style="color:lightseagreen"></span> Register</a></li>
+								<li><a href="{% url 'users:login' %}"><span class="glyphicon glyphicon-log-in" style="color: limegreen"></span> Log In</a></li>
 								{% endif %}
 							</ul>
 							</div>
@@ -42,6 +57,11 @@
 
 						</div>
     </div>
+<div class="container"><div class="jumbotron ">
+	<h1>"Speak up your mind."</h1>
+</div>
+</div>
+
 
 <div class="container">
 	<div class="page-header">

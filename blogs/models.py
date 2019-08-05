@@ -13,3 +13,10 @@ class BlogPost(models.Model):
         """ Return the text representation of the blog . """
         return self.title.upper()
         return self.text
+
+class Contact(models.Model):
+    fullname = models.CharField(max_length=100)
+    email = models.EmailField()
+    title = models.CharField(max_length=100)
+    text = models.TextField()
+

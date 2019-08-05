@@ -1,0 +1,21 @@
+{% extends 'blogs/base.html' %}
+{% load bootstrap3 %}
+
+
+    {% block header %}
+    <h2>Send me a message, I'll reply you by email.</h2>
+    
+    {% endblock header %}
+
+{% block content %}
+<div class="form-newblog col-sm-8">
+<form action="{% url 'blogs:contact' %}" method='post' class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% buttons %}
+    <div class="btn-submit-ok"><button name="submit" class="btn btn-secondary btn-submit">SEND</button></div>
+    {% endbuttons %}
+</form>
+</div>
+{% endblock content %}

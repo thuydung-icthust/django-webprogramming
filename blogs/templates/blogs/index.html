@@ -1,17 +1,32 @@
-{% extends "blogs/base.html" %}
 
-{% block header %}
-<div class='jumbotron'>
-    <h1>Speak up your mind.</h1>
-</div>
-{% endblock header %}
+{% extends "blogs/base.html" %}
+    {% load static %}
+
+
 
 {% block content %}
-<h2>
-    <a href="{% url 'users:register' %}">Register an account</a> to become a blog-writer,
-    and take down all your memories. 
-</h2>
-<h2>
-    Anywhere you go, I will be there...
-</h2>
+
+<body>
+
+    <div class="container">
+            <div  class="titlepage">
+                To become a blogger
+                and write down all your memories, <a href="{% url 'users:register' %}">Register an account.</a>
+                <br>Let make our life more colorful with gorgeous stories.
+            
+            </div>
+        
+    </div>
+
+
+ <div class=" container ">
+    <div class="index-image">
+    <img style="width: 1150px" alt="Image description" src="{% static 'blogs/images/landscape.jpg' %}" />
+    </div>
+    <div class="centered quotes-favor">"The Way Get Started Is To Quit Talking And Begin Doing"<br>- Walt Disney -</div>
+</div>
+
+
+</body>
 {% endblock content %}
+

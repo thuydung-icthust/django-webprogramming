@@ -1,18 +1,18 @@
 {% extends "blogs/base.html" %}
 
 {% block content %}
-<h1>
+<h2>
     Blogs
-</h1>
+</h2>
 <ul>
     {% for blog in blogs %}
     <li>
         <!--<p>{{ blog.title }}</p>
         <p>{{ blog.date_added|date:'M d, Y H:i' }}</p>
         <p> {{ blog.text|linebreaks }} </p> -->
-        <div class="panel panel-collapse">
+        <div class="panel panel-collapse link-blog">
                 <h3><a href="{% url 'blogs:blog' blog.id %}">{{ blog.title }}</a>
-                <small> {{ blog.owner.username }} </small> </h3>
+                <small class="author"> {{ blog.owner.username }} </small> </h3>
         </div>
         
     </li>
@@ -23,6 +23,9 @@
     {% endfor %}
 
 </ul>
-<a href="{% url 'blogs:new_blog' %}">ADD A NEW BLOG</a>
+<button class="btn-add"><a href="{% url 'blogs:new_blog' %}">
+    <h3 class="addblog">ADD A NEW BLOG</h3>
+</a></button>
+
 
 {% endblock content %}

@@ -11,15 +11,15 @@
 <p>Your username and password didn't match. Please try again.</p>
 
 {% endif %}
-
+<div class="col-sm-6 login">
 <form method="post" action="{% url 'users:login' %}" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
 
     {% buttons %}
-    <button name="submit" class="btn btn-success">Log In</button>
+    <div class="btn-submit-ok"><button name="submit" class="btn btn-success btn-submit">Log In</button></div>
     {% endbuttons %}
     <input type="hidden" name="next" value="{% url 'blogs:index' %}" />
 </form>
-
+</div>
 {% endblock content %}
