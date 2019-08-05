@@ -1,0 +1,349 @@
+
+.navbar {
+  overflow: hidden !important;
+  background-color: #f1f1f1;
+  padding: 3px 3px !important;
+  transition: 0.4s !important;
+  position: fixed !important;
+  width: 100% !important;
+  top: 0 !important;
+  z-index: 99 !important;
+}
+.container {
+     padding-right: 0px; 
+     padding-left: 0px; 
+    margin-right: auto;
+    margin-left: auto;
+}
+body {
+  background-color: #183030 !important;
+  color: blue;
+}
+.jumbotron{
+  margin-top: 35px !important;
+        background-color: #183030 !important;
+        font-family: 'Alex Brush', cursive !important;
+        font-size: 60px !important;
+        color: white !important;
+    }
+.jumbotron > h1 {
+  font-size: 100px !important;
+}
+  
+h2, h1 {
+  color:linen !important;
+  margin-left: 40px;
+} 
+
+h4 {
+  margin-left: inherit;
+  color: white !important;
+}
+h2, h4 {
+   font-family: 'Playfair Display' !important;
+} 
+
+    .titlepage {
+      color: linen;
+      font-size: 30px;
+      font-family: 'Allan', cursive !important;
+      float: right;
+
+    }
+
+    .row {
+      padding-bottom: 30px;
+    }
+/*-------- LINK-------- */
+
+
+/* visited link */
+a:visited {
+  color: rgb(114, 224, 182);
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: rgb(16, 197, 70);
+}
+
+.navbar-nav>li:hover
+{
+  font-display: bold;
+  color: white;
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+/*------------FORM ------------------*/
+.form {
+  
+  background-color: aliceblue !important;
+  
+}
+.link-blog, h2 {
+  background-color: #183030 !important;
+  font: font-family: 'Playfair Display' !important;
+}
+
+.author {
+  color: yellow;
+}
+
+/* --------------IMAGES --------------- */
+.index-image {
+  opacity: 0.5;
+  filter: alpha(opacity=50)
+  padding-top: 80px;
+  padding-right: inherit;
+    position: inherit;
+    display: block
+    
+}
+
+.index-image:hover
+{
+  opacity: 1;
+  filter: alpha(opacity=0);
+}
+
+
+
+
+/*--------------- QUOTES -------------- */
+
+.centered {
+  
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.quotes-favor {
+  margin-top: 500px;
+  padding-top: 500px;
+  max-width: 500px;
+  font-family: 'Dekko';
+  font-size: 50px;
+  color: linen;
+}
+
+/*------------- PROFILE --------------------*/
+
+.avatar {
+  border: 5px solid white;
+   vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-align: middle;
+  
+}
+
+.avatar:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:400px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+.big-hello {
+  padding-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  color: aliceblue;
+  font-size: 20px;
+  text-align: left;
+}
+
+.intro {
+  font-weight: bold;
+  font-family: 'Heebo', sans-serif;
+  color:aliceblue;
+  font-size: 40px;
+  text-align: left;
+}
+
+.about-me {
+  margin-bottom: 10px;
+
+font-size: 50px;
+text-align: center;
+margin: 20px 0 10px;
+    padding: 0 0 10px;
+    position: relative;
+}
+
+.about-me:after {
+  
+    background-color: #efefef; 
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    width: 200px;
+}
+
+.basic_info 
+{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  line-height: 38pt;
+}
+
+.personal_social
+{
+  display: inline;
+  font-size: 50px;
+  text-align: center;
+  line-height: 80pt;
+}
+
+.btn-infor
+{
+  float: right;
+  left: 50%;
+  position: relative;
+  background-color: rgb(172, 154, 154) !important;
+
+}
+
+.btn-infor:hover
+{
+  color: green;
+  
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+.center-icon
+{
+  text-align: center;
+}
+
+/*------------ INFORMATION --------------*/
+
+
+
+.infor1 {
+ background-color: transparent !important;
+ 
+}
+.infor-spec {
+  
+  background:url("images/bg1.54500d47e8ad.png");
+    /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-size:cover;
+  background-position:center;
+    padding-top:100px;
+    padding-bottom:100px;
+
+    background-color: hsla(240, 100%, 40%, 0)	;
+    
+}
+
+.infor-more {
+  background-color: transparent !important;
+  color: gainsboro;
+  line-height: 33pt;
+  font-family: 'rubik', sans-serif;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+/*-------------------- FORMS ----------------------- */
+.form
+{
+  margin: 20px;
+  padding: 20px;
+  left: 0% !important;
+  text-align: left;
+  color: rgb(7, 7, 7);
+  background-color:#EFF8FF !important;
+  font-size: 24px;
+}
+
+.btn-submit 
+{
+  left: 50%;
+  background-color: #183030 !important;
+  color: white !important;
+}
+.btn-submit-ok
+{
+  left: 50% !important;
+  text-align: center !important;
+} 
+
+.btn-submit:hover {
+  
+  color: white !important;
+  font-display: bold !important;
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+.login {
+  left: 25% !important;
+}
+
+.btn-add 
+{
+  color: #183030 !important;
+  font-display: bold !important;
+  background-color: white !important;
+}
+
+.btn-add:hover
+{
+  color: white !important;
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+/**
+.content 
+{
+  text-align: center;
+  background-image: url("images/bg2.42029932f0b2.jpg");
+  height: 100%;
+
+  /* Center and scale the image nicely 
+  background-size:cover;
+  background-position:center;
+    padding-top:100px;
+    padding-bottom:100px;
+    opacity: 0.6;
+    filter: grayscale(90%);
+}
+ */
+
+ .content {
+   margin-left: 0% !important;
+   padding-left: 0px;
+   
+ }
+
+ .mainblog {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+
+ .bg2 {
+   opacity: 0.5;
+   filter: grayscale(90%);
+ }
