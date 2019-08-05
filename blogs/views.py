@@ -36,7 +36,7 @@ def new_blog(request):
         # POST data submitted, process data.
         form = BlogForm(request.POST)
         if form.is_valid():
-            new_blog=form.save()
+            new_blog=form.save(commit=False)
             new_blog.owner=request.user
             new_blog.save()
             return HttpResponseRedirect(reverse('blogs:blogposts'))
