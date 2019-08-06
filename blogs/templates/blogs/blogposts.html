@@ -4,16 +4,20 @@
 <h2>
     Blogs
 </h2>
+<div class="col-sm-8">
 <ul>
     {% for blog in blogs %}
     <li>
         <!--<p>{{ blog.title }}</p>
         <p>{{ blog.date_added|date:'M d, Y H:i' }}</p>
         <p> {{ blog.text|linebreaks }} </p> -->
-        <div class="panel panel-collapse link-blog">
-                <h3><a href="{% url 'blogs:blog' blog.id %}">{{ blog.title }}</a>
+        <div class="panel panel-success panel-blog">
+            <div class="panel-heading"><h3> {{ blog.title }}
                 <small class="author"> {{ blog.owner.username }} </small> </h3>
+            <a href="{% url 'blogs:blog' blog.id %}"> View blog </a></div>
+            
         </div>
+        
         
     </li>
     {% empty %}
@@ -24,8 +28,10 @@
 
 </ul>
 <button class="btn-add"><a href="{% url 'blogs:new_blog' %}">
-    <h3 class="addblog">ADD A NEW BLOG</h3>
-</a></button>
+        <h3 class="addblog">Add a new blog</h3>
+    </a></button>
+</div>
+
 
 
 {% endblock content %}

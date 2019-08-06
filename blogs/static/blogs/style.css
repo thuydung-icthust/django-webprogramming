@@ -1,3 +1,6 @@
+/*-------------- RESPONSIVE ------------------- */
+
+
 
 .navbar {
   overflow: hidden !important;
@@ -8,6 +11,14 @@
   width: 100% !important;
   top: 0 !important;
   z-index: 99 !important;
+}
+
+.navbar-toggle 
+{
+  color: #183030 !important;
+  background-color: #EFF8FF !important;
+  font-size: 1vw;
+  
 }
 .container {
      padding-right: 0px; 
@@ -23,11 +34,11 @@ body {
   margin-top: 35px !important;
         background-color: #183030 !important;
         font-family: 'Alex Brush', cursive !important;
-        font-size: 60px !important;
+        font-size: 4vw !important;
         color: white !important;
     }
 .jumbotron > h1 {
-  font-size: 100px !important;
+  font-size: 7vw !important;
 }
   
 h2, h1 {
@@ -45,7 +56,7 @@ h2, h4 {
 
     .titlepage {
       color: linen;
-      font-size: 30px;
+      font-size: 3vw;
       font-family: 'Allan', cursive !important;
       float: right;
 
@@ -58,8 +69,10 @@ h2, h4 {
 
 
 /* visited link */
+
+
 a:visited {
-  color: rgb(114, 224, 182);
+  color: blue;
 }
 
 /* mouse over link */
@@ -81,7 +94,7 @@ a:active {
 
 /*------------FORM ------------------*/
 .form {
-  
+  font-size: 2vw !important;
   background-color: aliceblue !important;
   
 }
@@ -90,19 +103,33 @@ a:active {
   font: font-family: 'Playfair Display' !important;
 }
 
+
 .author {
-  color: yellow;
+  color: red;
+}
+
+/*----------------PANEL ---------------*/
+
+.panel-blog > h3 {
+  font-size: 3vw;
+  
 }
 
 /* --------------IMAGES --------------- */
+.img-cover
+{
+  filter: grayscale(70%);
+  opacity: 0.3;
+  padding-top: 10px;
+}
+
 .index-image {
   opacity: 0.5;
   filter: alpha(opacity=50)
   padding-top: 80px;
-  padding-right: inherit;
-    position: inherit;
-    display: block
-    
+  
+  position: inherit;
+  display: block;
 }
 
 .index-image:hover
@@ -111,25 +138,28 @@ a:active {
   filter: alpha(opacity=0);
 }
 
-
+.imagebox 
+{
+  display: block;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Dekko';
+  top: 20%;
+}
 
 
 /*--------------- QUOTES -------------- */
 
-.centered {
-  
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-}
 
 .quotes-favor {
-  margin-top: 500px;
-  padding-top: 500px;
-  max-width: 500px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  text-align: center;
+  max-width: 60%;
   font-family: 'Dekko';
-  font-size: 50px;
+  font-size: 4vw;
   color: linen;
 }
 
@@ -159,7 +189,7 @@ a:active {
   padding-top: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 1.8vw;
   text-align: left;
 }
 
@@ -167,14 +197,14 @@ a:active {
   font-weight: bold;
   font-family: 'Heebo', sans-serif;
   color:aliceblue;
-  font-size: 40px;
+  font-size: 4vw;
   text-align: left;
 }
 
 .about-me {
   margin-bottom: 10px;
 
-font-size: 50px;
+font-size: 4vw;
 text-align: center;
 margin: 20px 0 10px;
     padding: 0 0 10px;
@@ -297,7 +327,7 @@ margin: 20px 0 10px;
 }
 
 .login {
-  left: 25% !important;
+  left: 0% !important;
 }
 
 .btn-add 
@@ -335,15 +365,36 @@ margin: 20px 0 10px;
    padding-left: 0px;
    
  }
+.panel 
+{
+  width: 100%;
+}
+.panel-heading > h3
+{
+  font-size: 2vw;
+}
 
  .mainblog {
-   position: absolute;
+  font-size: 1.5vw;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
  }
-
+.mainblog > h2 
+{
+  margin-left: 0%;
+  font-size: 3vw;
+}
  .bg2 {
+   
+   max-width: 100%;
+   background-repeat: repeat-y;
    opacity: 0.5;
    filter: grayscale(90%);
+ }
+
+ h3, .addblog
+ {
+   font-size: 3vw;
  }

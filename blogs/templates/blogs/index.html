@@ -9,7 +9,7 @@
 <body>
 
     <div class="container">
-            <div  class="titlepage">
+            <div class="titlepage">
                 To become a blogger
                 and write down all your memories, <a href="{% url 'users:register' %}">Register an account.</a>
                 <br>Let make our life more colorful with gorgeous stories.
@@ -19,13 +19,14 @@
     </div>
 
 
- <div class=" container ">
-    <div class="index-image">
-    <img style="width: 1150px" alt="Image description" src="{% static 'blogs/images/landscape.jpg' %}" />
-    </div>
-    <div class="centered quotes-favor">"The Way Get Started Is To Quit Talking And Begin Doing"<br>- Walt Disney -</div>
+ <div class=" container imagebox col-sm-12">
+    
+    <img class="index-image img-responsive" style="width: 100%" alt="Best Quote" src="{% static 'blogs/images/landscape.jpg' %}" />
+    <p class="quotes-favor img-title">"The Way Get Started Is To Quit Talking And Begin Doing"<br>- Walt Disney -</p>
+    
+    <img class="img-cover img-responsive" style="width: 100%" alt="Motivation"
+        src="{% static 'blogs/images/cover.jpg' %}" />
 </div>
-
 
 </body>
 {% endblock content %}
