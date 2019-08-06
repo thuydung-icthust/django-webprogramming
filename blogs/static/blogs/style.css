@@ -126,7 +126,6 @@ a:active {
   opacity: 0.5;
   filter: alpha(opacity=50)
   padding-top: 80px;
-  
   position: inherit;
   display: block;
 }
