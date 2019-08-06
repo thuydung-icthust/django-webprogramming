@@ -6,14 +6,18 @@
 
 <div class="container bg2"> <img style="width: 100%" alt="Image description" src="{% static 'blogs/images/bg2.jpg' %}" /></div>
 
-<div class="mainblog">
+<div class="mainblog" style="font-size: 1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
 <h2 style="left: 0%;">
     Blog: {{ blog.title }}
 </h2>
 
 <div class="panel panel-danger">
     <div class="panel-heading">
-        <h3>
+        <h3 style="font-size: 3vw;">
             {{ blog.date_added|date:'M d, Y H:i' }}
             <small>
                 <a href="{% url 'blogs:edit_blog' blog.id %}">

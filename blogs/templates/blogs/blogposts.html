@@ -12,7 +12,7 @@
         <p>{{ blog.date_added|date:'M d, Y H:i' }}</p>
         <p> {{ blog.text|linebreaks }} </p> -->
         <div class="panel panel-success panel-blog">
-            <div class="panel-heading"><h3> {{ blog.title }}
+            <div class="panel-heading" style="font-size: 3vw;"><h3> {{ blog.title }}
                 <small class="author"> {{ blog.owner.username }} </small> </h3>
             <a href="{% url 'blogs:blog' blog.id %}"> View blog </a></div>
             
@@ -28,7 +28,7 @@
 
 </ul>
 <button class="btn-add"><a href="{% url 'blogs:new_blog' %}">
-        <h3 class="addblog">Add a new blog</h3>
+        <h3 class="addblog" style="font-size: 2.5vw;">Add a new blog</h3>
     </a></button>
 </div>
 

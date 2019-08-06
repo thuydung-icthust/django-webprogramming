@@ -12,7 +12,7 @@
 
 {% endif %}
 <div class="col-sm-6 login">
-<form method="post" action="{% url 'users:login' %}" class="form">
+<form method="post" action="{% url 'users:login' %}" class="form" style="font-size: 2vw;">
     {% csrf_token %}
     {% bootstrap_form form %}
 

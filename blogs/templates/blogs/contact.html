@@ -9,7 +9,7 @@
 
 {% block content %}
 <div class="form-newblog col-sm-8">
-<form action="{% url 'blogs:contact' %}" method='post' class="form">
+<form action="{% url 'blogs:contact' %}" method='post' class="form" style="font-size: 2vw;">
     {% csrf_token %}
     {% bootstrap_form form %}
 
