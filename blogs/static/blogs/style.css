@@ -119,8 +119,7 @@ a:active {
 .img-cover
 {
   filter: grayscale(70%);
-  opacity: 0.3;
-  padding-top: 10px;
+  opacity: 0.2;
 }
 
 .index-image {
