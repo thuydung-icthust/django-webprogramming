@@ -4,7 +4,7 @@
 
 <div class="content col-sm-12" style="text-align: center">
 
-<div class="container bg2"> <img style="width: 100%" alt="Image description" src="{% static 'blogs/images/bg2.jpg' %}" /></div>
+<div class="container bg2"> <img style="width: 100%; margin-left: 0px;" alt="Image description" src="{% static 'blogs/images/bg2.jpg' %}" /></div>
 
 <div class="mainblog" style="font-size: 1.5vw;
   position: relative;
@@ -16,7 +16,7 @@
 </h2>
 
 <div class="panel panel-danger">
-    <div class="panel-heading">
+    <div class="panel-heading" style="margin-left: 0px; ">
         <h3 style="font-size: 3vw;">
             {{ blog.date_added|date:'M d, Y H:i' }}
             <small>
