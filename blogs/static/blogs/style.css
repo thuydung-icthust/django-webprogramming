@@ -1,6 +1,6 @@
 /*-------------- RESPONSIVE ------------------- */
 
-
+{% load static %}
 
 .navbar {
   overflow: hidden !important;
@@ -269,7 +269,7 @@ margin: 20px 0 10px;
 }
 .infor-spec {
   
-  background:url('images/bg1.png');
+  background: url('images/bg1.png');
     /* Full height */
   height: 100%;
 
