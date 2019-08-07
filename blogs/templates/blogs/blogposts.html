@@ -13,7 +13,7 @@
         <p> {{ blog.text|linebreaks }} </p> -->
         <div class="panel panel-success panel-blog">
             <div class="panel-heading" style="font-size: 3vw;"><h3> {{ blog.title }}
-                <small class="author"> {{ blog.owner.username }} </small> </h3>
+                <small class="author" style="color: red;"> {{ blog.owner.username }} </small> </h3>
             <a href="{% url 'blogs:blog' blog.id %}"> View blog </a></div>
             
         </div>
