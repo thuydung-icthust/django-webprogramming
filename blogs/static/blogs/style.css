@@ -34,12 +34,10 @@ body {
   margin-top: 35px !important;
         background-color: #183030 !important;
         font-family: 'Alex Brush', cursive !important;
-        font-size: 4vw !important;
+        
         color: white !important;
     }
-.jumbotron > h1 {
-  font-size: 7vw !important;
-}
+
   
 h2, h1 {
   color:linen !important;
