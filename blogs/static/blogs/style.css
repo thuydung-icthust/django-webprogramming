@@ -394,3 +394,15 @@ margin: 20px 0 10px;
  {
    font-size: 3vw;
  }
+
+ .bgr {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg") !important;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }

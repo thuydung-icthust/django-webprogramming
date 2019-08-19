@@ -2,34 +2,33 @@
 {% load static %}
 {% block content %}
 
-<div class="content col-sm-12" style="text-align: center">
+<div class="row" >
 
-<div class="container bg2"> <img style="width: 100%; margin-left: 0px;" alt="Image description" src="{% static 'blogs/images/bg2.jpg' %}" /></div>
-
-<div class="mainblog" style="font-size: 1.5vw;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);">
-<h2 style="left: 0%;">
-    Blog: {{ blog.title }}
-</h2>
-
-<div class="panel panel-danger">
-    <div class="panel-heading" style="margin-left: 0px; ">
-        <h3 style="font-size: 3vw;">
-            {{ blog.date_added|date:'M d, Y H:i' }}
-            <small>
-                <a href="{% url 'blogs:edit_blog' blog.id %}">
-                    Edit blog</a>
-            </small>
-        </h3>
+    <div class="col-sm-12">
+        <h2 style="left: 0%; font-size: 2.5em;">
+            Blog: {{ blog.title }}
+        </h2>
+        <div class="panel panel-danger">
+            <div class="panel-heading" style="margin-left: 0px; ">
+                <h3 style="font-size: 2vw;">
+                    {{ blog.date_added|date:'M d, Y H:i' }}
+                    <small>
+                        <a href="{% url 'blogs:edit_blog' blog.id %}">
+                            Edit blog</a>
+                    </small>
+                </h3>
+            </div>
+            <div class="panel-body" style="font-size: 2vw; background: url('https://i.ibb.co/QmsjNcQ/p.jpg') no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+	color: white;
+  	background-color:#333; !important">
+                {{ blog.text|linebreaks }}
+            </div>
+        </div> <!-- panel -->
     </div>
-    <div class="panel-body" style="font-size: 2vw;">
-        {{ blog.text|linebreaks }}
-    </div>
-</div> <!-- panel -->
-</div>
 </div>
 
 
